@@ -1,6 +1,5 @@
 facebook-stats
 ==============
-
 /* 
   Código simples para contabilidade de compartilhamentos, likes, comments 
   de uma página do facebook caso queira exibir algumas destas informações em seu site
@@ -9,9 +8,9 @@ facebook-stats
   from facebook page if you want to display some of this information on your website
 */
 
-<php
-  //This could be anything URL
-  $source_url = "https://www.facebook.com/your-page-here"; 
+<?php
+  $source_url = "https://www.facebook.com/your-page-here"; //This could be anything URL
+  
   $url = "http://api.facebook.com/restserver.php?method=links.getStats&urls=".urlencode($source_url);
   $xml = file_get_contents($url);
   $xml = simplexml_load_string($xml);
